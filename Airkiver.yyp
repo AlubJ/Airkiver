@@ -1,0 +1,39 @@
+{
+  "resourceType": "GMProject",
+  "resourceVersion": "1.7",
+  "name": "Airkiver",
+  "AudioGroups": [
+    {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
+  ],
+  "configs": {
+    "children": [],
+    "name": "Default",
+  },
+  "defaultScriptType": 1,
+  "Folders": [
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Airkiver","folderPath":"folders/Airkiver.yy",},
+  ],
+  "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"archive.fs","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"archive.fs.bak","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"archive.ft","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"archive.ft.bak","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hello.txt","CopyToMask":-1,"filePath":"datafiles",},
+  ],
+  "isEcma": false,
+  "LibraryEmitters": [],
+  "MetaData": {
+    "IDEVersion": "2023.4.0.84",
+  },
+  "resources": [
+    {"id":{"name":"Airkiver","path":"scripts/Airkiver/Airkiver.yy",},},
+    {"id":{"name":"objAirkiverTest","path":"objects/objAirkiverTest/objAirkiverTest.yy",},},
+    {"id":{"name":"rmAirkiverTest","path":"rooms/rmAirkiverTest/rmAirkiverTest.yy",},},
+  ],
+  "RoomOrderNodes": [
+    {"roomId":{"name":"rmAirkiverTest","path":"rooms/rmAirkiverTest/rmAirkiverTest.yy",},},
+  ],
+  "TextureGroups": [
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
+  ],
+}
