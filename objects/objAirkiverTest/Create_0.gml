@@ -1,13 +1,26 @@
 /// @desc Airkiver Test
 // Load Airkiver File Table
-airkiver = new Airkiver("archive.ft");
+airkiver = new Airkiver();
+
+var timer = get_timer();
+airkiver.load("archive.ft");
+show_debug_message($"'archive.ft' took {(get_timer() - timer) / 1000}ms to load");
+timer = get_timer();
+airkiver.build_directory_tree();
+show_debug_message($"build_directory_tree() took {(get_timer() - timer) / 1000}ms");
+
+show_debug_message($"file count {array_length(variable_struct_get_names(airkiver.filetable))}");
 
 // Load Airkiver File
-var file = airkiver.getFile("hello.txt", true);
+timer = get_timer();
+var text = airkiver.retrieve_text("hello.txt", false);
+show_debug_message($"retrieve_text() took {(get_timer() - timer) / 1000}ms");
 
-// Show Message
-show_message(buffer_read(file, buffer_text));
+// Load Airkiver File
+timer = get_timer();
+var buffer = buffer_load("airkive/hello.txt");
+var text2 = buffer_read(buffer, buffer_text);
+show_debug_message($"buffer_load() took {(get_timer() - timer) / 1000}ms");
+show_debug_message(text);
 
-// Delete Buffer
-buffer_delete(file);
-game_end(); 
+game_end();
