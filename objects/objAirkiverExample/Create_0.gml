@@ -1,5 +1,6 @@
-/// @desc Airkiver Test
-// Load Airkiver File Table
+/// @desc Airkiver Example
+
+// Create a new Airkiver Object
 airkiver = new Airkiver();
 
 var timer = get_timer();

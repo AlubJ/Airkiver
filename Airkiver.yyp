@@ -27,11 +27,11 @@
   },
   "resources": [
     {"id":{"name":"Airkiver","path":"scripts/Airkiver/Airkiver.yy",},},
-    {"id":{"name":"objAirkiverTest","path":"objects/objAirkiverTest/objAirkiverTest.yy",},},
-    {"id":{"name":"rmAirkiverTest","path":"rooms/rmAirkiverTest/rmAirkiverTest.yy",},},
+    {"id":{"name":"objAirkiverExample","path":"objects/objAirkiverExample/objAirkiverExample.yy",},},
+    {"id":{"name":"rmAirkiverExample","path":"rooms/rmAirkiverExample/rmAirkiverExample.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rmAirkiverTest","path":"rooms/rmAirkiverTest/rmAirkiverTest.yy",},},
+    {"roomId":{"name":"rmAirkiverExample","path":"rooms/rmAirkiverExample/rmAirkiverExample.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

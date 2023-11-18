@@ -3,7 +3,7 @@
     {"name":"Airkiver","order":5,"path":"folders/Airkiver.yy",},
   ],
   "ResourceOrderSettings": [
-    {"name":"objAirkiverTest","order":1,"path":"objects/objAirkiverTest/objAirkiverTest.yy",},
-    {"name":"rmAirkiverTest","order":2,"path":"rooms/rmAirkiverTest/rmAirkiverTest.yy",},
+    {"name":"objAirkiverExample","order":1,"path":"objects/objAirkiverExample/objAirkiverExample.yy",},
+    {"name":"rmAirkiverExample","order":2,"path":"rooms/rmAirkiverExample/rmAirkiverExample.yy",},
   ],
 }
