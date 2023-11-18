@@ -1,10 +1,16 @@
 # Airkiver
 Game File Archive Tool
 
+## Tested Platforms
+I have tested this on Windows, MacOS, and iOS. It has worked quite well on those three platforms.
+
+## Performance Overhead
+With smaller archives, the performance is quite good, with the `.retrieve()` method only taking about 0.06ms to execute, but with bigger archives, this number can ramp up. I tested this with an 800MB archive (2.5GB uncompressed) and the `.retrieve()` method took ~300ms to execute. I highly doubt that most GameMaker projects are going to use 2.5GB of external data.
+
 ## Airkive.py usage:
 `python Airkive.py [outputName]`
 
-The python script will ignore certain files, you can edit these in the script. The default files to get ignored are;
+The Python script will ignore certain files, you can edit these in the script. The default files to get ignored are;
  - `".DS_Store"`
  - `"Airkiver.py"`
  - `"[outputName].ft"`
