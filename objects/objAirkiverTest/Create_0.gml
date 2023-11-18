@@ -18,7 +18,7 @@ show_debug_message($"retrieve_text() took {(get_timer() - timer) / 1000}ms");
 
 // Load Airkiver File
 timer = get_timer();
-var buffer = buffer_load("airkive/hello.txt");
+var buffer = buffer_load("hello.txt");
 var text2 = buffer_read(buffer, buffer_text);
 show_debug_message($"buffer_load() took {(get_timer() - timer) / 1000}ms");
 show_debug_message(text);

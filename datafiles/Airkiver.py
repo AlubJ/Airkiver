@@ -63,8 +63,8 @@ if len(sys.argv) >= 3:
 # File Start Offset (Starts at the length of archive_bytes)
 offset = len(archive_bytes)
 
-# Start Directory Walk in "\datafiles"
-walk_dir = os.getcwd() + "/datafiles"
+# Start Directory Walk in "/"
+walk_dir = os.getcwd() + "/"
 print(walk_dir)
 for root, subdirs, files in os.walk(walk_dir):
     if root[-1] != "/":
@@ -122,7 +122,7 @@ for file in allfiles:
     offset += len(content)
 
 # Save Files
-with open("datafiles/" + outFilename + ".ft", "wb") as file:
+with open("" + outFilename + ".ft", "wb") as file:
         file.write(filetable_bytes)
-with open("datafiles/" + outFilename + ".fs", "wb") as file:
+with open("" + outFilename + ".fs", "wb") as file:
         file.write(archive_bytes)

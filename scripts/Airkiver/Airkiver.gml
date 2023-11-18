@@ -3,6 +3,7 @@
 	-------------------------------------------------------------------------
 	Script:			Airkiver
 	Version:		v1.10
+	License:		MIT (See 'LICENSE.txt')
 	Description:	Airkiver
 	-------------------------------------------------------------------------
 	History:
@@ -10,6 +11,7 @@
 	
 	To Do:
 	 - `retrieve_names` - multiple extensions provided as array?
+	 - `find_*` - File find equivilant functions
 */
 
 enum ENTRY_TYPE {
@@ -22,10 +24,10 @@ enum ENTRY_TYPE {
 /// @argument build_directory_tree {Bool} [Whether to build a full directory tree or not]
 /// @return {Struct<Airkiver>}
 /// @description Load an Airkive file and return an Airkive Struct
-function Airkiver(_file = -1, _build_directory_tree = true) constructor
+function Airkiver(_filepath = -1, _build_directory_tree = true) constructor
 {
 	// Settings
-	defaultToFileSystem = true;
+	default_to_file_system = true;
 	
 	// Variables
 	filetable = {  };
@@ -34,9 +36,9 @@ function Airkiver(_file = -1, _build_directory_tree = true) constructor
 	filepath = "";
 	
 	// File Table Validation and Construction
-	if (file_exists(_file))
+	if (file_exists(_filepath))
 	{
-		self.load(_file);
+		self.load(_filepath);
 		if (_build_directory_tree) self.build_directory_tree();
 	}
 	else return;
@@ -59,7 +61,7 @@ function Airkiver(_file = -1, _build_directory_tree = true) constructor
 		if (_file_version != 1.1) throw ("Airkiver: Wrong file version");
 		
 		// File Count
-		var file_count = buffer_read(_buffer, buffer_s32);
+		file_count = buffer_read(_buffer, buffer_s32);
 		
 		// File Loop
 		repeat (file_count)
@@ -119,7 +121,7 @@ function Airkiver(_file = -1, _build_directory_tree = true) constructor
 	static retrieve = function(_filepath, _validate = false)
 	{
 		// Check If File Exists
-		if (!variable_struct_exists(filetable, _filepath) && (file_exists(_filepath) && defaultToFileSystem)) return buffer_load(_filepath);
+		if (!variable_struct_exists(filetable, _filepath) && (file_exists(_filepath) && default_to_file_system)) return buffer_load(_filepath);
 		else if (!variable_struct_exists(filetable, _filepath) && !file_exists(_filepath)) return -1;
 		
 		// File
@@ -217,7 +219,7 @@ function Airkiver(_file = -1, _build_directory_tree = true) constructor
 		
 		// Get File Table Names
 		var _filetable_names = variable_struct_get_names(filetable);
-		var _i = 0; repeat(array_length(_filetable_names))
+		var _i = 0; repeat(file_count)
 		{
 			// Split File Table Entry
 			var _split_path = string_split(_filetable_names[_i], "/");
